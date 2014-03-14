@@ -1,0 +1,16 @@
+<h1>Hello there Welcome to our Att app</h1>
+
+
+<%if current_user %>
+			
+				<%= link_to 'Sign Out', new_auth_path, method: :delete %>
+
+		 		<%= current_user ? "Hello "+ current_user.username.capitalize + "!": "" %>			
+<%else%>
+		<%= link_to 'Sign in',new_auth_path, url:"#login" %>
+			
+<%end%>
+
+
+
+
